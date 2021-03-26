@@ -1,0 +1,28 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.list {
+  list-style: none;
+}
+.link {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+.body {
+  font-family: Roboto, sans-serif;
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
+}

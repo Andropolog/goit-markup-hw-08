@@ -1,0 +1,27 @@
+/* ============ CLIENTS ============ */
+
+.clients-icon {
+  width: 170px;
+  height: 60px;
+}
+.clients-thumb {
+  border-radius: 4px;
+  display: block;
+  background-color: var(--main-bg-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--brand-blue-color);
+    border-color: var(--brand-blue-color);
+  }
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-item-company {
+  fill: #afb1b8;
+}
