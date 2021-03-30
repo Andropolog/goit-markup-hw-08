@@ -20,14 +20,14 @@
                 <a class="logo link" href="/">Web<span class="logo-studio">Studio</span></a>
                 <ul class="nav-links list">
                     <li class="list"><a class="nav-item-link link" href="/">Студия</a></li>
-                    <li class="list"><a class="nav-item-link link active" href="./portfolio.html">Портфолио</a></li>
+                    <li class="list"><a class="nav-item-link link current" href="./portfolio.html">Портфолио</a></li>
                     <li class="list"><a class="nav-item-link link" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="header-contacts">
-                <li class="list header-contacts-item">
-                    <a class="header-contacts-link link" href="mailto:info@devstudio.com">
-                        <svg class="header-contacts-icon" width="16" height="12">
+                <li class="header-contacts-item list">
+                    <a class="header-contacts-link link mail-contact" href="mailto:info@devstudio.com">
+                        <svg class="header-contacts-icon" width="16" height="10">
                             <use href="./images/sprite.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
@@ -42,132 +42,306 @@
                     </a>
                 </li>
             </ul>
+            <button class="mobile-open-btn" data-menu-button>
+                <svg class="mobile-open-icon">
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <button class="mobile-menu-close-btn" data-menu-close>
+                <svg class="mobile-menu-close-icon">
+                    <use href="./images/sprite.svg#icon-close-menu"></use>
+                </svg>
+            </button>
+            <ul class="mobile-nav-list list">
+                <li class="mobile-nav-item">
+                    <a href="/" class="mobile-nav-list-link link active">Студия</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="./portfolio.html" class="mobile-nav-list-link link">Портфолио</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#contacts" class="mobile-nav-list-link link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mobile-contacts-list">
+                <li class="mobile-contacts-item list">
+                    <a class="mobile-contacts-mail link" href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="mobile-contacts-item list">
+                    <a class="mobile-contacts-tel link" href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-socials-list list">
+                <li class="mobile-socials-item">
+                    <a href="" class="mobile-socials-link link">Instagram</a>
+                </li>
+                <li class="mobile-socials-item">
+                    <a href="" class="mobile-socials-link link">Tweeter</a>
+                </li>
+                <li class="mobile-socials-item">
+                    <a href="" class="mobile-socials-link link">Facebook</a>
+                </li>
+                <li class="mobile-socials-item">
+                    <a href="" class="mobile-socials-link link">Linkedin</a>
+                </li>
+            </ul>
         </div>
     </header>
     <!----- PORTFOLIO ----->
     <section class="portfolio section">
        <div class="container">
             <h1 class="hidden">Портфолио</h1>
-            <ul class="portfolio-fiter list">
-                <li class="filter-item"><button type="button" class="filter-button">Маркетинг</button></li>
-                <li class="filter-item"><button type="button" class="filter-button">Все</button></li>
-                <li class="filter-item"><button type="button" class="filter-button">Веб-сайты</button></li>
-                <li class="filter-item"><button type="button" class="filter-button">Приложения</button></li>
-                <li class="filter-item"><button type="button" class="filter-button">Дизайн</button></li>
+            <ul class="filter list">
+                <li class="filter__item"><button type="button" class="filter__button">Маркетинг</button></li>
+                <li class="filter__item"><button type="button" class="filter__button">Все</button></li>
+                <li class="filter__item"><button type="button" class="filter__button">Веб-сайты</button></li>
+                <li class="filter__item"><button type="button" class="filter__button">Приложения</button></li>
+                <li class="filter__item"><button type="button" class="filter__button">Дизайн</button></li>
             </ul>
-            <ul class="portfolio-cards list">
-                <li class="gallery">              
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/technocryak.jpg" alt="cайт на мониторе ноутбука" width="370">
-                            <p class="card-text-effect">Технокряк это современная площадка распространения коронавируса. Компании используют эту
-                                платформу для цифрового
-                                шпионажа и атак на защищённые сервера конкурентов.</p>
+            <ul class="gallery list">
+                <li class="gallery__item">              
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/tehnokryak_d.webp 1x, ./images/portfolio/tehnokryak_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/tehnokryak_d.jpg 1x, ./images/portfolio/tehnokryak_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tehnokryak_t.webp 1x, ./images/portfolio/tehnokryak_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/tehnokryak_t.jpg 1x, ./images/portfolio/tehnokryak_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/tehnokryak_m.webp 1x, ./images/portfolio/tehnokryak_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfoliotehnokryak_m.jpg 1x, ./images/portfolio/tehnokryak_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/tehnokryak_m.jpg" alt="cайт на мониторе ноутбука">
+                            </picture>
+                            <p class="gallery__thumb-context">Технокряк это современная площадка распространения коронавируса. Компании используют эту
+                                платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Технокряк</h2>
                             <p>Веб-сайт</p>
                         </div>                                 
                     </a>                                     
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/poster.jpg" alt="плакат с двумя баскетболистами" width="370">                       
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio, minus facilis eveniet autem porro quos repellat?</p>
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/goldenstar_d.webp 1x, ./images/portfolio/goldenstar_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/goldenstar_d.jpg 1x, ./images/portfolio/goldenstar_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/goldenstar_t.webp 1x, ./images/portfolio/goldenstar_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/goldenstar_t.jpg 1x, ./images/portfolio/goldenstar_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/goldenstar_m.webp 1x, ./images/portfolio/goldenstar_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/goldenstar_m.jpg 1x, ./images/portfolio/goldenstar_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/goldenstar_m.jpg" alt="плакат с двумя баскетболистами">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio, minus facilis eveniet autem porro quos repellat?</p>
                         </div>  
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Постер New Orlean vs Golden Star</h2>
                             <p>Дизайн</p>
                         </div>
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/seafood.jpg" alt="вывеска морского ресторана" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/seafood_d.webp 1x, ./images/portfolio/seafood_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/seafood_d.jpg 1x, ./images/portfolio/seafood_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/seafood_t.webp 1x, ./images/portfolio/seafood_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/seafood_t.jpg 1x, ./images/portfolio/seafood_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/seafood_m.webp 1x, ./images/portfolio/seafood_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/seafood_m.jpg 1x, ./images/portfolio/seafood_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/seafood_m.jpg" alt="вывеска морского ресторана">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Ресторан Seafood</h2>
                             <p>Приложение</p>
                         </div>
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/prime.jpg" alt="наушники" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/prime_d.webp 1x, ./images/portfolio/prime_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/prime_d.jpg 1x, ./images/portfolio/prime_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/prime_t.webp 1x, ./images/portfolio/prime_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/prime_t.jpg 1x, ./images/portfolio/prime_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/prime_m.webp 1x, ./images/portfolio/prime_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/prime_m.jpg 1x, ./images/portfolio/prime_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/prime_m.jpg" alt="наушники">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Проект Prime</h2>
                             <p>Маркетинг</p>
                         </div>
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/boxes.jpg" alt="две коробочки" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/boxes_d.webp 1x, ./images/portfolio/boxes_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/boxes_d.jpg 1x, ./images/portfolio/boxes_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/boxes_t.webp 1x, ./images/portfolio/boxes_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/boxes_t.jpg 1x, ./images/portfolio/boxes_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/boxes_m.webp 1x, ./images/portfolio/boxes_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/boxes_m.jpg 1x, ./images/portfolio/boxes_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/boxes_m.jpg" alt="две коробочки">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Проект Boxes</h2>
                             <p>Приложение</p>
                         </div>                      
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/inspiration.jpg" alt="вид сайта на мониторе" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/borders_d.webp 1x, ./images/portfolio/borders_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/borders_d.jpg 1x, ./images/portfolio/borders_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/borders_t.webp 1x, ./images/portfolio/borders_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/borders_t.jpg 1x, ./images/portfolio/borders_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/borders_m.webp 1x, ./images/portfolio/borders_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/borders_m.jpg 1x, ./images/portfolio/borders_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/borders_m.jpg" alt="вид сайта на мониторе">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Inspiration has no Borders</h2>
                             <p>Веб-сайт</p>
                         </div>
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/edition.jpg" alt="разворот журнала" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                        <picture>
+                            <source srcset="./images/portfolio/limited_d.webp 1x, ./images/portfolio/limited_d@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/limited_d.jpg 1x, ./images/portfolio/limited_d@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/limited_t.webp 1x, ./images/portfolio/limited_t@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/limited_t.jpg 1x, ./images/portfolio/limited_t@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/limited_m.webp 1x, ./images/portfolio/limited_m@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./images/portfolio/limited_m.jpg 1x, ./images/portfolio/limited_m@2x.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/limited_m.jpg" alt="разворот журнала">
+                        </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Издание Limited Edition</h2>
                             <p>Дизайн</p>
                         </div>                       
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/label.jpg" alt="бирка с логотипом" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                            <picture>
+                                <source srcset="./images/portfolio/lab_d.webp 1x, ./images/portfolio/lab_d@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/portfolio/lab_d.jpg 1x, ./images/portfolio/lab_d@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/lab_t.webp 1x, ./images/portfolio/lab_t@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/portfolio/lab_t.jpg 1x, ./images/portfolio/lab_t@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/lab_m.webp 1x, ./images/portfolio/lab_m@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source srcset="./images/portfolio/lab_m.jpg 1x, ./images/portfolio/lab_m@2x.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/lab_m.jpg" alt="бирка с логотипом">
+                            </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Проект LAB</h2>
                             <p>Маркетинг</p>
                         </div>                       
                     </a>
                 </li>
-                <li class="gallery">
-                    <a class="gallery-card link" href="">
-                        <div class="card-thumb">
-                            <img src="./images/business.jpg" alt="руки печатающие на ноутбуке" width="370">
-                            <p class="card-text-effect">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
+                <li class="gallery__item">
+                    <a class="gallery__link link" href="">
+                        <div class="gallery__thumb">
+                        <picture>
+                            <source srcset="./images/portfolio/growing_d.webp 1x, ./images/portfolio/growing_d@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/growing_d.jpg 1x, ./images/portfolio/growing_d@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/growing_t.webp 1x, ./images/portfolio/growing_t@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/growing_t.jpg 1x, ./images/portfolio/growing_t@2x.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/growing_m.webp 1x, ./images/portfolio/growing_m@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./images/portfolio/growing_m.jpg 1x, ./images/portfolio/growing_m@2x.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/growing_m.jpg" alt="руки печатающие на ноутбуке">
+                        </picture>
+                            <p class="gallery__thumb-context">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui alias iure optio,
                             minus facilis eveniet autem porro quos repellat?</p>
                         </div>
-                        <div class="card-description">
+                        <div class="gallery__description">
                             <h2>Growing Business</h2>
                             <p>Приложение</p>
                         </div>                     
@@ -177,74 +351,76 @@
        </div>
     </section>
     <!----- FOOTER ----->
-<footer class="footer" id="contacts">
-    <div class="container">
-        <div>
-            <a class="logo link" href="/">Web<span class="footer-logo-studio">Studio</span></a>
-            <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-            <ul class="footer-contacts list">
-                <li><a class="footer-contacts-item link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="footer-contacts-item link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-            </ul>
+    <footer class="footer section" id="contacts">
+        <div class="container">
+            <div class="footer__data">
+                <a class="logo link" href="/">Web<span class="footer-logo-studio">Studio</span></a>
+                <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
+                <ul class="footer-contacts list">
+                    <li><a class="footer-contacts-item link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li class="footer-tel"><a class="footer-contacts-item link" href="tel:+380961111111">+38 096 111 11
+                            11</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <p class="footer-join">присоединяйтесь</p>
+                <ul class="social-footer list">
+                    <li class="social-footer-item">
+                        <div class="social-footer-thumb">
+                            <a href="" class="social-footer-link">
+                                <svg class="social-link-icon">
+                                    <use href="./images/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="social-footer-item">
+                        <div class="social-footer-thumb">
+                            <a href="" class="social-footer-link">
+                                <svg class="social-link-icon">
+                                    <use href="./images/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="social-footer-item">
+                        <div class="social-footer-thumb">
+                            <a href="" class="social-footer-link">
+                                <svg class="social-link-icon">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="social-footer-item">
+                        <div class="social-footer-thumb">
+                            <a href="" class="social-footer-link">
+                                <svg class="social-link-icon">
+                                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-subs">
+                <p class="footer-subs-title">Подпишитесь на рассылку</p>
+                <form action="" class="footer-subs-form">
+                    <label class="footer-subs-form-field">
+                        <input name="user-email" class="footer-subs-form-input" type="email" placeholder="E-mail">
+                    </label>
+                    <span>
+                        <button class="footer-subs-btn" type="submit">Подписаться
+                            <svg class="footer-btn-icon" width="24" height="24">
+                                <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </span>
+                </form>
+            </div>
         </div>
-        <div class="footer-socials">
-            <p class="footer-join">присоединяйтесь</p>
-            <ul class="social-footer list">
-                <li class="social-footer-item">
-                    <div class="social-footer-thumb">
-                        <a href="" class="social-footer-link">
-                            <svg class="social-link-icon">
-                                <use href="./images/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="social-footer-item">
-                    <div class="social-footer-thumb">
-                        <a href="" class="social-footer-link">
-                            <svg class="social-link-icon">
-                                <use href="./images/sprite.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="social-footer-item">
-                    <div class="social-footer-thumb">
-                        <a href="" class="social-footer-link">
-                            <svg class="social-link-icon">
-                                <use href="./images/sprite.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="social-footer-item">
-                    <div class="social-footer-thumb">
-                        <a href="" class="social-footer-link">
-                            <svg class="social-link-icon">
-                                <use href="./images/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-subs">
-            <p class="footer-subs-title">Подпишитесь на рассылку</p>
-            <form action="" class="footer-subs-form">
-                <label class="footer-subs-form-field">
-                    <input name="user-email" class="footer-subs-form-input" type="email" placeholder="E-mail">
-                </label>
-                <span class="qqq">
-                    <button class="footer-subs-btn" type="submit">Подписаться
-                        <svg class="footer-btn-icon" width="24" height="24">
-                            <use href="./images/sprite.svg#icon-send"></use>
-                        </svg>
-                    </button>
-
-                </span>
-            </form>
-        </div>
-    </div>
-</footer>
+    </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
+

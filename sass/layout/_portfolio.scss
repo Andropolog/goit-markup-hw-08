@@ -1,13 +1,24 @@
 /* ============ PORTFOLIO ============ */
 
-.filter-item {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:not(:last-child) {
-    margin-right: 8px;
-    margin-bottom: 50px;
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    justify-content: flex-start;
   }
 }
-.filter-button {
+.filter__item {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+}
+.filter__button {
+  height: 32px;
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
@@ -19,16 +30,8 @@
     cursor: pointer;
   }
 }
-.portfolio-fiter {
+.gallery {
   display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 6px 22px;
-}
-.portfolio-cards {
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
@@ -46,28 +49,7 @@
     color: var(--main-font-color);
   }
 }
-.card-description {
-  border: 1px solid #eeeeee;
-  border-top: none;
-  padding: 20px 24px;
-  color: var(--alt-font-color);
-}
-.card-thumb {
-  position: relative;
-  width: 370px;
-  height: 294px;
-  overflow: hidden;
-}
-.container .gallery {
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc(100% / 3 - 30px);
-}
-.gallery:hover .card-text-effect,
-.gallery:focus .card-text-effect {
-  transform: translateY(0%);
-}
-.gallery {
+.gallery__item {
   position: relative;
   overflow: hidden;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,8 +58,31 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+  }
 }
-.card-text-effect {
+.gallery__thumb {
+  position: relative;
+  width: 450px;
+  height: 404px;
+  overflow: hidden;
+}
+.container .gallery__item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.gallery__item:hover .gallery__thumb-context,
+.gallery__item:focus .gallery__thumb-context {
+  transform: translateY(0%);
+}
+.gallery__thumb-context {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -89,4 +94,10 @@
   color: #ffffff;
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery__description {
+  border: 1px solid #eeeeee;
+  border-top: none;
+
+  color: var(--alt-font-color);
 }

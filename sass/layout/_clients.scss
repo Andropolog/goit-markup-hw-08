@@ -1,10 +1,32 @@
 /* ============ CLIENTS ============ */
 
-.clients-icon {
-  width: 170px;
-  height: 60px;
+.clients__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-top: -30px;
+  margin-left: -30px;
 }
-.clients-thumb {
+.clients__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
+.clients__link {
+  fill: #afb1b8;
+}
+.clients__thumb {
+  text-align: center;
+  box-sizing: border-box;
   border-radius: 4px;
   display: block;
   background-color: var(--main-bg-color);
@@ -18,10 +40,7 @@
     border-color: var(--brand-blue-color);
   }
 }
-.clients-list {
-  display: flex;
-  justify-content: space-between;
-}
-.clients-item-company {
-  fill: #afb1b8;
+.clients__icon {
+  width: 170px;
+  height: 90px;
 }
