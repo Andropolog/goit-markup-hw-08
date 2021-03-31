@@ -1,6 +1,6 @@
 .current {
   color: var(--brand-blue-color);
-  fill
+  fill: var(--brand-blue-color);
   position: relative;
   &::after {
     content: "";
