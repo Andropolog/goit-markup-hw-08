@@ -488,7 +488,7 @@ img {
     margin-right: 88px;
   }
   .nav-item-link {
-    margin-right: 50px;
+    margin-right: 40px;
     transition: all 250ms linear;
   }
   .nav-item-link:hover, .nav-item-link:focus {
