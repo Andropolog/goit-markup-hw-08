@@ -200,8 +200,6 @@ img {
 
 .gallery__thumb {
   position: relative;
-  width: 450px;
-  height: 404px;
   overflow: hidden;
 }
 
@@ -232,6 +230,9 @@ img {
 .gallery__description {
   border: 1px solid #eeeeee;
   border-top: none;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
   color: var(--alt-font-color);
 }
 
@@ -438,6 +439,11 @@ img {
     color: var(--brand-blue-color);
     fill: var(--brand-blue-color);
     text-decoration: underline;
+  }
+  .header-contacts-link:hover .header-contacts-icon:hover,
+  .header-contacts-link:hover .header-contacts-icon:focus, .header-contacts-link:focus .header-contacts-icon:hover,
+  .header-contacts-link:focus .header-contacts-icon:focus {
+    fill: var(--brand-blue-color);
   }
   .mail-contact {
     margin-bottom: 10px;
